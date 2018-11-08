@@ -1,0 +1,39 @@
+{
+  "name": "image-decode",
+  "version": "1.0.0",
+  "description": "Decode image data",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dy/image-decode.git"
+  },
+  "keywords": [
+    "image",
+    "image-decode",
+    "get-pixels",
+    "image-pixels",
+    "pixels"
+  ],
+  "author": "dy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dy/image-decode/issues"
+  },
+  "homepage": "https://github.com/dy/image-decode#readme",
+  "devDependencies": {
+    "image-equal": "^3.1.0",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "bmp-js": "^0.1.0",
+    "buffer-to-uint8array": "^1.1.0",
+    "image-type": "^3.0.0",
+    "jpeg-js": "^0.3.4",
+    "omggif": "^1.0.9",
+    "pngjs": "^3.3.3",
+    "to-array-buffer": "^2.1.0"
+  }
+}
