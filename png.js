@@ -6,8 +6,6 @@ var PNG = require('pngjs').PNG
 var toab = require('to-array-buffer')
 
 module.exports = function read (data, o) {
-	var png = new PNG()
-
 	var imgData = PNG.sync.read(Buffer.from(data))
 
 	var pixels = new Uint8Array(toab(imgData.data))

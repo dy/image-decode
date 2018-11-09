@@ -32,14 +32,14 @@ module.exports = function read (data, o) {
 	// }
 
 	// single frame gif
-	var data = new Uint8Array(reader.width * reader.height * 4)
+	var pixels = new Uint8Array(reader.width * reader.height * 4)
 
-	reader.decodeAndBlitFrameRGBA(0, data)
+	reader.decodeAndBlitFrameRGBA(0, pixels)
 
-	data.width = reader.width
-	data.height = reader.height
-	data.data = data.subarray()
+	pixels.width = reader.width
+	pixels.height = reader.height
+	pixels.data = pixels.subarray()
 
-	return data
+	return pixels
 }
 
