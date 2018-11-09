@@ -14,6 +14,8 @@ decode(fs.readFileSync('./data.png')).then(pixels => {
 }, e => {})
 ```
 
+## API
+
 ### `let {data, width, height} = await decode(buffer, mimeType?)`
 
 Takes input `buffer` with encoded image data and decodes its contents, returns pixels `data` array. `mimeType` can be passed to skip image type detection.
