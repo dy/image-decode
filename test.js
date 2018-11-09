@@ -25,25 +25,35 @@ t('jpg', async t => {
 	t.end()
 })
 
-t.only('bmp', t => {
+t('bmp', async t => {
 	let data = await decode(fs.readFileSync('./fixture/test_pattern.jpg'))
-
-	t.equal(require('pixelmatch')(data.data, fix.data, null, 16, 8, {}), 0)
 
 	t.ok(await eq(data, fix, {tol: 0.04}))
 
 	t.end()
 })
 
-t('gif', t => {
+t('gif', async t => {
+	let data = await decode(fs.readFileSync('./fixture/test_pattern.gif'))
+
+	t.ok(await eq(data, fix))
+
 	t.end()
 })
 
-t('webp', t => {
+t.skip('webp', async t => {
+	let data = await decode(fs.readFileSync('./fixture/test_pattern.webp'))
+
+	t.ok(await eq(data, fix))
+
 	t.end()
 })
 
-t('tiff', t => {
+t.only('tiff', async t => {
+	let data = await decode(fs.readFileSync('./fixture/test_pattern.tif'))
+
+	t.ok(await eq(data, fix))
+
 	t.end()
 })
 

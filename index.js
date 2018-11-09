@@ -17,9 +17,12 @@ function decode (data, o) {
   if (!type) {
     type = detectType(data)
 
-    if (!type) throw Error('Cannot detect image data type')
+    // we do not throw an error since argument can be decoded data already
+    if (!type) return null
 
     type = type.mime
+
+    if (!decode[type]) throw Error('Type `' + type + '` does not seem to be supported')
   }
 
   return decode[type](data, o)

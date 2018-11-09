@@ -1,6 +1,6 @@
 v# image-decode [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/dy/image-decode.svg)](https://travis-ci.org/dy/image-decode)
 
-Decode image data from raw encoded binary data in any image format: PNG, GIF, BMP, JPEG, TIFF, Webp.
+Decode image data from raw encoded binary data in any image format: PNG, GIF, BMP, JPEG, TIFF.
 
 ## Usage
 
