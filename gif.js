@@ -40,6 +40,6 @@ module.exports = function read (data, o) {
 	data.height = reader.height
 	data.data = data.subarray()
 
-	return Promise.resolve(data)
+	return data
 }
 

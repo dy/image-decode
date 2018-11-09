@@ -10,7 +10,7 @@ function read (data, o) {
 	var jpegData = jpeg.decode(data)
 
 	if(!jpegData) {
-		return Promise.reject(new Error("Error decoding jpeg"))
+		throw new Error("Error decoding jpeg")
 	}
 
 	var pixels = b2u8(jpegData.data)
@@ -18,6 +18,6 @@ function read (data, o) {
 	pixels.height = jpegData.height
 	pixels.width = jpegData.width
 
-	return Promise.resolve(pixels)
+	return pixels
 }
 

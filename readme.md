@@ -9,14 +9,12 @@ Decode image data from raw encoded binary data in any image format: PNG, GIF, BM
 ```js
 let decode = require('image-decode')
 
-decode(fs.readFileSync('./data.png')).then(pixels => {
-	let {data, width, height} = pixels
-}, e => {})
+let {data, width, height} = decode(fs.readFileSync('./data.png'))
 ```
 
 ## API
 
-### `let {data, width, height} = await decode(buffer, mimeType?)`
+### `let {data, width, height} = decode(buffer, mimeType?)`
 
 Takes input `buffer` with encoded image data and decodes its contents, returns pixels `data` array. `mimeType` can be passed to skip image type detection.
 
