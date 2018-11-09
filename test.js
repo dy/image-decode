@@ -49,7 +49,7 @@ t.skip('webp', async t => {
 	t.end()
 })
 
-t.only('tiff', async t => {
+t('tiff', async t => {
 	let data = await decode(fs.readFileSync('./fixture/test_pattern.tif'))
 
 	t.ok(await eq(data, fix))
@@ -57,8 +57,11 @@ t.only('tiff', async t => {
 	t.end()
 })
 
-t('undefined type', t => {
+t.only('undefined type', async t => {
+	let data = await decode([0,0,0,0,0,0,0,0,0])
+	t.notOk(data)
 
+	t.end()
 })
 
 t('base64', t => {
