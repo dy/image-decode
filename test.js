@@ -57,16 +57,15 @@ t('tiff', async t => {
 	t.end()
 })
 
-t.only('undefined type', async t => {
+t('undefined type', async t => {
 	let data = await decode([0,0,0,0,0,0,0,0,0])
 	t.notOk(data)
 
 	t.end()
 })
 
-t('base64', t => {
-})
-
+// TODO
+t('base64')
 t('arraybuffer')
 t('buffer')
 t('uint8')
