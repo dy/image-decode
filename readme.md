@@ -1,4 +1,4 @@
-v# image-decode [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/dy/image-decode.svg)](https://travis-ci.org/dy/image-decode)
+# image-decode [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/dy/image-decode.svg)](https://travis-ci.org/dy/image-decode)
 
 Decode image data from raw encoded binary data in any image format: PNG, GIF, BMP, JPEG, TIFF.
 
@@ -6,6 +6,13 @@ Decode image data from raw encoded binary data in any image format: PNG, GIF, BM
 
 [![npm install image-decode](https://nodei.co/npm/image-decode.png?mini=true)](https://npmjs.org/package/image-decode/)
 
+```js
+let decode = require('image-decode')
+
+decode(fs.readFileSync('./data.png')).then(pixels => {
+	let {data, width, height} = pixels
+}, e => {})
+```
 
 ### `let {data, width, height} = await decode(buffer, mimeType?)`
 
