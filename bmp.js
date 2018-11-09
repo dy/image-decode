@@ -4,8 +4,7 @@
 var bmp = require('bmp-js')
 
 module.exports = function read (data, o) {
-	var bmpData = bmp.decode(data)
-
+	var bmpData = bmp.decode(Buffer.from(data))
 	var width = bmpData.width
 	var height = bmpData.height
 
@@ -28,6 +27,6 @@ module.exports = function read (data, o) {
 	pixels.width = bmpData.width
 	pixels.height = bmpData.height
 
-	return Promise.resolve(pixels)
+	return pixels
 }
 

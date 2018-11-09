@@ -8,57 +8,68 @@ let eq = require('image-equal')
 
 
 t('png', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.png'))
+	let data = decode(fs.readFileSync('./fixture/test_pattern.png'))
 
 	t.ok(await eq(data, fix))
+
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 
 	t.end()
 })
 
 t('jpg', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.jpg'))
-
-	t.equal(require('pixelmatch')(data.data, fix.data, null, 16, 8, {}), 0)
+	let data = decode(fs.readFileSync('./fixture/test_pattern.jpg'))
 
 	t.ok(await eq(data, fix, {tol: 0.04}))
 
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 	t.end()
 })
 
 t('bmp', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.jpg'))
+	let data = decode(fs.readFileSync('./fixture/test_pattern.jpg'))
 
 	t.ok(await eq(data, fix, {tol: 0.04}))
 
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 	t.end()
 })
 
 t('gif', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.gif'))
+	let data = decode(fs.readFileSync('./fixture/test_pattern.gif'))
 
 	t.ok(await eq(data, fix))
 
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 	t.end()
 })
 
 t.skip('webp', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.webp'))
+	let data = decode(fs.readFileSync('./fixture/test_pattern.webp'))
 
 	t.ok(await eq(data, fix))
 
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 	t.end()
 })
 
 t('tiff', async t => {
-	let data = await decode(fs.readFileSync('./fixture/test_pattern.tif'))
+	let data = decode(fs.readFileSync('./fixture/test_pattern.tif'))
 
 	t.ok(await eq(data, fix))
 
+	t.equal(data.width, fix.width)
+	t.equal(data.height, fix.height)
 	t.end()
 })
 
 t('undefined type', async t => {
-	let data = await decode([0,0,0,0,0,0,0,0,0])
+	let data = decode([0,0,0,0,0,0,0,0,0])
 	t.notOk(data)
 
 	t.end()
