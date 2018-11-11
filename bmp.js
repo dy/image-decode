@@ -10,7 +10,7 @@ module.exports = function read (data, o) {
 
 	var pixels = new Uint8Array(width * height * 4)
 
-	// bmp stores stuff as ARGB seq
+	// bmp stores stuff as ABGR seq
 	for (var i = 0; i < pixels.length; i+=4) {
 		var alpha = bmpData.data[i + 0];
 		var blue = bmpData.data[i + 1];
@@ -23,10 +23,11 @@ module.exports = function read (data, o) {
 		pixels[i + 3] = bmpData.is_with_alpha ? alpha : 0xff;
 	}
 
-	pixels.data = pixels.subarray()
-	pixels.width = bmpData.width
-	pixels.height = bmpData.height
+	return {
+		data: pixels,
+		width: bmpData.width,
+		height: bmpData.height
+	}
 
-	return pixels
 }
 

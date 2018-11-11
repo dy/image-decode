@@ -16,7 +16,7 @@ let {data, width, height} = decode(fs.readFileSync('./data.png'))
 
 ### `let {data, width, height} = decode(buffer, mimeType?)`
 
-Takes input `buffer` with encoded image data and decodes its contents, returns pixels `data` array. `mimeType` can be passed to skip image type detection.
+Takes input `buffer` with encoded image data and decodes its contents, returns pixels `data` array with layout `[r, g, b, a, r, g, b, a, ...]`. `mimeType` can be passed to skip image type detection.
 
 `buffer` can be any binary data container:
 
@@ -27,7 +27,6 @@ Takes input `buffer` with encoded image data and decodes its contents, returns p
 * Blob
 * base64 string
 
-`data` is _Uint8Array_ with pixels layout `[r, g, b, a, r, g, b, a, ...]`.
 
 ## See also
 

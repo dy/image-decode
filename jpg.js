@@ -13,11 +13,10 @@ function read (data, o) {
 		throw new Error("Error decoding jpeg")
 	}
 
-	var pixels = b2u8(jpegData.data)
-	pixels.data = pixels.subarray()
-	pixels.height = jpegData.height
-	pixels.width = jpegData.width
-
-	return pixels
+	return {
+		data: b2u8(jpegData.data),
+		height: jpegData.height,
+		width: jpegData.width
+	}
 }
 

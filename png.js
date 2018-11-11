@@ -10,10 +10,10 @@ module.exports = function read (data, o) {
 
 	var pixels = new Uint8Array(toab(imgData.data))
 
-	pixels.data = pixels.subarray()
-	pixels.width = imgData.width | 0
-	pixels.height = imgData.height | 0
-
-	return pixels
+	return {
+		data: pixels,
+		width: imgData.width | 0,
+		height: imgData.height | 0
+	}
 }
 

@@ -36,10 +36,10 @@ module.exports = function read (data, o) {
 
 	reader.decodeAndBlitFrameRGBA(0, pixels)
 
-	pixels.width = reader.width
-	pixels.height = reader.height
-	pixels.data = pixels.subarray()
-
-	return pixels
+	return {
+		data: pixels,
+		width: reader.width,
+		height: reader.height
+	}
 }
 
