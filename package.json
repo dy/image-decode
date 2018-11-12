@@ -40,7 +40,7 @@
     "jpeg-js": "^0.3.4",
     "omggif": "^1.0.9",
     "pngjs": "^3.3.3",
-    "to-array-buffer": "^2.1.0",
+    "to-array-buffer": "^3.0.0",
     "utif": "^2.0.1"
   }
 }

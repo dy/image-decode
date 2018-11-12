@@ -9,6 +9,8 @@ module.exports = decode
 function decode (data, o) {
   data = toab(data)
 
+  if (!data) return null
+
   if (!o) o = {}
   else if (typeof o === 'string') o = {type: o}
 
