@@ -10,11 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/dy/image-decode.git"
   },
-  "browserify": {
-    "transform": [
-      "brfs"
-    ]
-  },
   "keywords": [
     "image",
     "image-decode",
