@@ -17,7 +17,7 @@ function decode (data, o) {
   var type = o.type
 
   if (!type) {
-    type = detectType(data)
+    type = detectType(new Uint8Array(data))
 
     // we do not throw an error since argument can be decoded data already
     if (!type) return null
