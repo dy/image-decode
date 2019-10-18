@@ -23,8 +23,6 @@ Takes input `buffer` with encoded image data and decodes its contents, returns p
 * ArrayBuffer
 * Buffer
 * Uint8Array
-* File
-* Blob
 * base64 string
 
 
