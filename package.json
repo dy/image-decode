@@ -4,6 +4,7 @@
   "description": "Decode image data from gif, jpeg, png, tiff or bmp",
   "main": "index.js",
   "scripts": {
+    "build": "browserify index.js -o dist/image-decode.js -g uglifyify --standalone imagedecode",
     "test": "node test"
   },
   "repository": {
@@ -26,7 +27,9 @@
   "devDependencies": {
     "brfs": "^2.0.1",
     "image-equal": "^3.1.0",
-    "tape": "^4.9.1"
+    "tape": "^4.9.1",
+    "browserify": "^16.5.1",
+    "uglifyify": "^5.0.2"
   },
   "dependencies": {
     "bmp-js": "^0.1.0",
