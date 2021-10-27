@@ -32,7 +32,7 @@
     "bmp-js": "^0.1.0",
     "buffer-to-uint8array": "^1.1.0",
     "image-type": "^3.0.0",
-    "jpeg-js": "^0.3.7",
+    "jpeg-js": "^0.4.0",
     "omggif": "^1.0.9",
     "pngjs": "^3.3.3",
     "to-array-buffer": "^3.0.0",
