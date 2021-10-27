@@ -1,6 +1,6 @@
 {
   "name": "image-decode",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Decode image data from gif, jpeg, png, tiff or bmp",
   "main": "index.js",
   "scripts": {
