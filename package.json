@@ -1,6 +1,6 @@
 {
   "name": "image-decode",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Decode image data from gif, jpeg, png, tiff or bmp",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "bmp-js": "^0.1.0",
     "buffer-to-uint8array": "^1.1.0",
     "image-type": "^3.0.0",
-    "jpeg-js": "^0.3.4",
+    "jpeg-js": "^0.3.7",
     "omggif": "^1.0.9",
     "pngjs": "^3.3.3",
     "to-array-buffer": "^3.0.0",
