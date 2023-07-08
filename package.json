@@ -25,7 +25,7 @@
   "homepage": "https://github.com/dy/image-decode#readme",
   "devDependencies": {
     "brfs": "^2.0.1",
-    "image-equal": "^3.1.0",
+    "image-equal": "^4.3.1",
     "tape": "^4.9.1"
   },
   "dependencies": {
